@@ -1,14 +1,13 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/dashboard', function () {
-    return view('admin.index');
-});
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 //product
 Route::resource('admin/products', ProductController::class)->names([
@@ -22,4 +21,12 @@ Route::resource('admin/products', ProductController::class)->names([
 ]);
 
 //category
-Route::get('/admin/categories', [CategoryController::class, 'index'])->name('admin.categories.index');
+Route::resource('admin/categories', CategoryController::class)->names([
+    'index' => 'admin.categories.index',
+    'create' => 'admin.categories.create',
+    'store' => 'admin.categories.store',
+    'show' => 'admin.categories.show',
+    'edit' => 'admin.categories.edit',
+    'update' => 'admin.categories.update',
+    'destroy' => 'admin.categories.destroy',
+]);
