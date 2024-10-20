@@ -14,8 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-
+        $products = Product::with('category')->paginate(50);
         return view('admin.products.index', ['products' => $products]);
     }
 

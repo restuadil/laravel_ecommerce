@@ -3,7 +3,7 @@
         <a href="{{ route('dashboard') }}">Dashboard</a>
     </h1>
     <div>
-        <ul class="text-white flex flex-col justify-center items-center gap-8">
+        <ul class="text-white flex flex-col  items-center gap-2">
             <a href="{{ route('admin.products.index') }}"
                 class="flex flex-row items-center justify-start w-full px-3 py-2 gap-2 hover:bg-gray-700 transition-colors duration-300 rounded-md">
                 <i class='bx bx-package bx-tada bx-md'></i>
@@ -13,6 +13,11 @@
                 class="flex flex-row items-center justify-start w-full px-3 py-2 gap-2 hover:bg-gray-700 transition-colors duration-300 rounded-md">
                 <i class='bx bx-category bx-spin bx-md'></i>
                 <span class="text-white text-base font-medium">Category</span>
+            </a>
+            <a href="{{ route('admin.brands.index') }}"
+                class="flex flex-row items-center justify-start w-full px-3 py-2 gap-2 hover:bg-gray-700 transition-colors duration-300 rounded-md">
+                <i class='bx bx-purchase-tag bx-tada bx-md'></i>
+                <span class="text-white text-base font-medium">Brands</span>
             </a>
         </ul>
     </div>

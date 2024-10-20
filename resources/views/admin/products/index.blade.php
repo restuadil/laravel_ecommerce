@@ -15,7 +15,7 @@
                         <th class="border px-2 py-2">Name</th>
                         <th class="border px-2 py-2">Price</th>
                         <th class="border px-2 py-2">Category</th>
-                        <th class="border px-2 py-2">Description</th>
+                        <th class="border px-2 py-2">Brand</th>
                         <th class="border px-2 py-2">Status</th>
                         <th class="border px-2 py-2">Action</th>
                     </tr>
@@ -29,7 +29,7 @@
                             <td class="border px-2 py-2 text-left">{{ $product->name }}</td>
                             <td class="border px-2 py-2">Rp.{{ $product->price }}</td>
                             <td class="border px-2 py-2">{{ $product->category->name }}</td>
-                            <td class="border px-2 py-2 text-left">{{ $product->description }}</td>
+                            <td class="border px-2 py-2 text-center">{{ $product->brand->name }}</td>
                             <td class="border px-2 py-2 text-center ">
                                 @if ($product->is_active == 'TRUE')
                                     <span class="text-green-600 font-semibold">Active</span>

@@ -25,6 +25,16 @@
                 <p class="mt-2 text-3xl">{{ $categoryCount }}</p>
             </div>
 
+            <!-- Total Brands -->
+            <div class="bg-white p-6 rounded-lg shadow-md shadow-slate-600">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-xl font-bold">Total Brands</h2>
+                    <span class="text-sm text-blue-400 underline">
+                        <a href="{{ route('admin.brands.index') }}">See all</a>
+                    </span>
+                </div>
+                <p class="mt-2 text-3xl">{{ $brandCount }}</p>
+            </div>
 
         </div>
         <!-- Grafik Produk vs Kategori -->

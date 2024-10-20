@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
@@ -29,4 +30,16 @@ Route::resource('admin/categories', CategoryController::class)->names([
     'edit' => 'admin.categories.edit',
     'update' => 'admin.categories.update',
     'destroy' => 'admin.categories.destroy',
+]);
+
+
+//Brand
+Route::resource('admin/brands', BrandController::class)->names([
+    'index' => 'admin.brands.index',
+    'create' => 'admin.brands.create',
+    'store' => 'admin.brands.store',
+    'show' => 'admin.brands.show',
+    'edit' => 'admin.brands.edit',
+    'update' => 'admin.brands.update',
+    'destroy' => 'admin.brands.destroy',
 ]);
